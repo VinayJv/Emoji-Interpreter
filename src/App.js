@@ -3,16 +3,20 @@ import "./styles.css";
 var headingText = "Emoji Interpreter";
 var color = "orange";
 
-// this is an object
+
 const emojiDictionary = {
   "😀": "Grinning Face",
-  "😁": "Beaming Face with Smiling Eyes",
   "😆": "Grinning Squinting Face",
-  "😅": "Grinning Face with Sweat",
+  "🚀": "Rocket",
+  "⭐": "Star",
   "🤣": "Rolling on the Floor Laughing",
   "🙂": "Slightly Smiling Face",
+  "👻": "Ghost",
   "🙃": "Upside-Down Face",
-  "😉": "Winking Face"
+  "🤔": "Thinking Face",
+  "😅": "Grinning Face with Sweat",
+  "😁": "Beaming Face with Smiling Eyes",
+  "🥳": "Partying Face"
 };
 var emojis = Object.keys(emojiDictionary);
 export default function App() {
@@ -21,7 +25,7 @@ export default function App() {
     var userInput = event.target.value;
 
     var meaning = emojiDictionary[userInput];
-    // console.log(meaning);
+    
 
     if (meaning === undefined) {
       meaning = "we don't have this in our dictionary";
@@ -29,7 +33,6 @@ export default function App() {
     setMeans(meaning);
   }
 
-  // from list of emojis
   function emojiClickHandler(emote) {
     // var inputEmote = emote.target.value;
     var meaning1 = emojiDictionary[emote];
